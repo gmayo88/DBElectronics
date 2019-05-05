@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2019 at 02:36 AM
+-- Generation Time: May 05, 2019 at 08:32 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.4
 
@@ -285,6 +285,18 @@ CREATE TABLE `shipping_option` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `shopping_cart`
+--
+
+CREATE TABLE `shopping_cart` (
+  `customer` int(11) NOT NULL,
+  `product` int(11) NOT NULL,
+  `qty` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `store`
 --
 
@@ -488,6 +500,13 @@ ALTER TABLE `shipper`
 ALTER TABLE `shipping_option`
   ADD PRIMARY KEY (`option_id`),
   ADD KEY `shipper` (`shipper`);
+
+--
+-- Indexes for table `shopping_cart`
+--
+ALTER TABLE `shopping_cart`
+  ADD PRIMARY KEY (`customer`,`product`),
+  ADD KEY `product` (`product`);
 
 --
 -- Indexes for table `store`
@@ -698,6 +717,13 @@ ALTER TABLE `shipment_contents`
 --
 ALTER TABLE `shipping_option`
   ADD CONSTRAINT `shipping_option_ibfk_1` FOREIGN KEY (`shipper`) REFERENCES `shipper` (`shipper_id`);
+
+--
+-- Constraints for table `shopping_cart`
+--
+ALTER TABLE `shopping_cart`
+  ADD CONSTRAINT `shopping_cart_ibfk_1` FOREIGN KEY (`customer`) REFERENCES `customer` (`customer_id`),
+  ADD CONSTRAINT `shopping_cart_ibfk_2` FOREIGN KEY (`product`) REFERENCES `product` (`product_id`);
 
 --
 -- Constraints for table `store`
