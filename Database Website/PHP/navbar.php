@@ -5,15 +5,15 @@
                     DB ELECTRONICS
                 </div>
    				<div class = "col-xs-2 my-col">
-                    <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search the store">
+                    <form class="input-group" action="search.php" method="GET">
+                    <input type="text" class="form-control" name="search" placeholder="Search the store">
                     <div class="input-group-append">
-                      <button type="button" class="btn btn-basic" style = "color: white; border: 1px solid white;">
+                      <button type="submit" class="btn btn-basic" style = "color: white; border: 1px solid white;">
                         <span class="glyphicon glyphicon-search"></span> 
                             Search
                       </button>
                     </div>
-                  </div>
+                  </form>
                 </div>
                 <div class = "col-xs-2 my-col">
      				<a href="index.php" class="btn btn-basic" role="button">Home</a>

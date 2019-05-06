@@ -1,0 +1,7 @@
+Database Users and Passwords
+
+user:				password:					privileges:
+admin				adminpass					All
+csrep				cspass						Select, Insert, Update, Delete
+stock				stockpass					Select, Insert, Update, Delete
+webuser				webpass						Select, Insert, Update, Delete
