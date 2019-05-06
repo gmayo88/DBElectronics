@@ -1,0 +1,17 @@
+.aboutUs
+{
+	font-weight: bold;
+	font-size: 40px;
+	margin: 20px;
+}
+
+.container
+{
+	border: 2px solid black;
+}
+.container .aboutUsRow .aboutUsCol
+{
+	align-items: center;
+	border: 2px solid black;
+}
+

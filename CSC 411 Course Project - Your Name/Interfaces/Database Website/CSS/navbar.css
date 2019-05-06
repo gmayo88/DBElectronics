@@ -1,0 +1,29 @@
+.my-row
+{
+	background-color: black;
+	padding: 10px;
+}
+
+.my-row .my-col a
+{
+	color: white;
+}
+
+.my-row .my-col 
+{
+	color: white;
+	margin: 5px;
+	margin-bottom: 0;
+}
+
+.my-row .my-logo
+{
+	font-weight: bold;
+	font-family: sans-serif;
+	border: 3px dashed white;
+	padding: 5px;
+	margin-right: 300px;
+	color: yellow;
+	text-align: left;
+	font-size: 30px;
+}
